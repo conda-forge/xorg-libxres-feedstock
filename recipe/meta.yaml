@@ -11,11 +11,12 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}            # [unix]
     - pkg-config
     - libtool
     - gnuconfig  # [unix]
@@ -30,8 +31,7 @@ requirements:
     - xorg-libxext
     - xorg-xextproto
   run:
-    - xorg-libx11
-    - xorg-libxext
+    - {{ pin_compatible('xorg-libx11') }}
 
 test:
   commands:
