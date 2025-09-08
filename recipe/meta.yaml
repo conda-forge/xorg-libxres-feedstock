@@ -1,5 +1,5 @@
 {% set name = "xorg-libxres" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://gitlab.freedesktop.org/xorg/lib/libxres/-/archive/libXres-{{ version }}/libxres-libXres-{{ version }}.tar.gz
-  sha256: 651e5d131ebcd8dbe72eccc84f4fbfc754abc02fe825301db2f38102715be25b
+  sha256: 82a97f57bf3dffcc49f7f987d09b3ff0215d4cf0360053c68b77441f6f33fce7
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 0
 
 requirements:
   build:
